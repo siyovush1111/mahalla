@@ -7,7 +7,7 @@ from django.contrib.auth.base_user import BaseUserManager, AbstractBaseUser
 class MyUserManager(BaseUserManager):
 
 
-    def create_user(self, username, password=None, **extra_fields):c
+    def create_user(self, username, password=None, **extra_fields):
         user = self.model(username, **extra_fields)
         user.set_password(password)
         user.is_active = True
